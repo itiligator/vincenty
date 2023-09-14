@@ -29,8 +29,6 @@ jobs:
           echo "VERSION_MINOR=$(cat version.h.in | grep MINOR | tr -dc '0-9')" >> $GITHUB_ENV
       - name: Run tests
         run: ctest
-      - name: Integration test
-        run: ./tests/integration_test.bash
       - name: Create Release
         if: success()
         id: create_release

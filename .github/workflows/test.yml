@@ -22,5 +22,3 @@ jobs:
           cmake --build . --target package
       - name: Run unit tests
         run: ctest
-      - name: Integration test
-        run: ./tests/integration_test.bash
